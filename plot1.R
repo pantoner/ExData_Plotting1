@@ -12,10 +12,12 @@ data$Date<-strptime(data$Date1, "%d/%m/%Y %H:%M:%S")
 data<-data[ ,-c(2,10)]
 
 names(data)
-#Here the plot is created - with red as color  
+#Here the plot is created - with red as color on white background 
 
         library(datasets)
         hist(data$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Frequency")
-
+#create png
+dev.copy(png,file="plot1.png",width = 480, height = 480)
+dev.off() 
 
 
