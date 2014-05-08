@@ -14,11 +14,11 @@ data<-data[ ,-c(2,10)]
 par(mfrow = c(2,2))
 
 with(data,plot(Date,Global_active_power,type="l",ylab="Global Active Power (kilowatts)", xlab=""))
-with(data,plot(Date,Voltage,type="l",ylab="Voltage", xlab="Date time"))
+with(data,plot(Date,Voltage,type="l",ylab="Voltage", xlab="Datetime"))
 
 plot(data$Date,data$Sub_metering_1,type="l",ylab="Energy Sub Metering", xlab="")
 lines(data$Date,data$Sub_metering_2,col="RED")
 lines(data$Date,data$Sub_metering_3,col="BLUE")
 legend("topright",lty = 1, col=c("black","red","blue"), legend= c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
-with(data,plot(Date,Global_reactive_power,type="l",ylab="Global_reactive_power", xlab="Date time"))
+with(data,plot(Date,Global_reactive_power,type="l",ylab="Global_reactive_power", xlab="Datetime"))
