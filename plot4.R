@@ -1,3 +1,4 @@
+#import data from working directory
 setwd("~/datasciencecoursera")
 #just use the dates that are needed
 data<-read.table("household_power_consumption.txt",header = TRUE, sep = ";",skip = 66637, nrows = 2880)
@@ -22,3 +23,6 @@ lines(data$Date,data$Sub_metering_3,col="BLUE")
 legend("topright",lty = 1, col=c("black","red","blue"), legend= c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 with(data,plot(Date,Global_reactive_power,type="l",ylab="Global_reactive_power", xlab="Datetime"))
+#create png files with white background
+dev.copy(png,file="plot3.png",width = 480, height = 480)
+dev.off() 
