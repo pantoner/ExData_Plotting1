@@ -24,5 +24,5 @@ legend("topright",lty = 1, col=c("black","red","blue"), legend= c("Sub_metering_
 
 with(data,plot(Date,Global_reactive_power,type="l",ylab="Global_reactive_power", xlab="Datetime"))
 #create png files with white background
-dev.copy(png,file="plot3.png",width = 480, height = 480)
+dev.copy(png,file="plot4.png",width = 480, height = 480)
 dev.off() 

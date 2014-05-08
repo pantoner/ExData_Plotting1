@@ -16,5 +16,5 @@ data<-data[ ,-c(2,10)]
 par(mfrow = c(1,1))
 with(data,plot(Date,Global_active_power,type="l",ylab="Global Active Power (kilowatts)", xlab=""))
 #create plot3.png on white background
-dev.copy(png,file="plot3.png",width = 480, height = 480)
+dev.copy(png,file="plot2.png",width = 480, height = 480)
 dev.off() 
